@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  background: #f5f5f5;
+  background: #e5e5e5;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Crimson Pro", serif;
+  font-weight: 600;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: clamp(1.25rem, 8.5vw, 7.5rem);
+  padding-right: clamp(1.25rem, 8.5vw, 7.5rem);
+}
+/* Nav start */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+  align-items: center;
+  position: relative;
+}
+nav img {
+  height: 25px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+nav ul a {
+  display: block;
+  padding: 0.75em 1.5em;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 300ms ease;
+}
+nav:not(.mobile) ul a:hover,
+nav:not(.mobile) ul a.active {
+  border-bottom: 2px solid #f15443;
+}
+nav button a {
+  padding: 1em 2em;
+  background: #f15443;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 200ms ease;
+}
+nav button a:hover {
+  background: #f8695a;
+}
+
+/* Mobile nav */
+nav.mobile {
+  display: none;
+}
+nav.mobile.active .open--menu,
+nav.mobile .close--menu {
+  display: none;
+}
+nav.mobile .open--menu,
+nav.mobile .close--menu {
+  cursor: pointer;
+}
+nav.mobile.active .close--menu,
+nav.mobile.active .dropdown {
+  display: block;
+}
+nav.mobile > div {
+  height: 40px;
+}
+nav.mobile .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: #fff;
+  background: #e5e5e5;
+
+  left: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 100vh 0 100vh rgba(0, 0, 0, 0.5);
+}
+nav.mobile a {
+  padding: 0.75em 0;
+}
+nav.mobile ul a:hover {
+  color: #f15443;
+}
+@media screen and (max-width: 820px) {
+  nav:not(.mobile) {
+    display: none;
+  }
+  nav.mobile {
+    display: flex;
+  }
+}
+/* Nav ends */
+
+button {
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+footer {
+  padding: clamp(80px, 2vw, 100px) 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 1.5rem 0 1rem;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer div {
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 820px) {
+  footer ul {
+    flex-direction: column;
+  }
+}

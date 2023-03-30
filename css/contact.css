@@ -1,0 +1,22 @@
+.line img {
+  width: 100%;
+}
+.contact {
+  margin-top: 70px;
+}
+.contact-header h1 {
+  font-style: 45px;
+  margin-bottom: 10px;
+}
+.contact-header h1 span {
+  display: block;
+}
+.board-members .main-members {
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.board-members .main-members .member img {
+  width: 50px;
+}
